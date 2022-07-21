@@ -12,5 +12,6 @@ export const ArchiveAll = (): JSX.Element => {
     
     return (
         <div>ArchiveClans</div>
+        
     )
 }
