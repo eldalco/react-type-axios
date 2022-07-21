@@ -5,17 +5,17 @@ import axios from "axios";
 const baseUrl:string = "https://rickandmortyapi.com/api/character";
 
 type GetResponse = {
-  results: [];
+  data: [];
 };
 
-const get = () => {
+const get = (page:number=1, name:string="", status:string="") => {
     // const config = {
     //   headers: {
     //     Authorization: `Bearer ${token}`,
     //   },
     // };
-    const request = axios.get<GetResponse>(`${baseUrl}`);
-    return request.then((response) => response.data);
+    const request = axios.get<GetResponse>(`${baseUrl}?page=${page}&name=${name}&status=${status}`);
+    return request.then((response) => response);
 };
   
 
