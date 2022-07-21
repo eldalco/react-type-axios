@@ -5,10 +5,10 @@ import getAllCharacters from "../services/getAllCharacters";
 type Dta = {
     loadingGet: boolean,
     errorGet: null,
-    dataGet: null | [],
+    dataGet: null | GetDataResponse,
 }
 type GetDataResponse = {
-  results: [];
+  data: [];
 };
 
 export default function useGetAllCharacters() {
@@ -18,15 +18,15 @@ export default function useGetAllCharacters() {
     dataGet: null,
   });
 
-  const get = useCallback(() => {
+  const get = useCallback((page:number, name:string, status:string) => {
     setStateGet({...stateGet, loadingGet: true, errorGet: null });
     getAllCharacters
-      .get()
-      .then((data: GetDataResponse) => {
+      .get(page, name, status)
+      .then((data) => {
         setStateGet({
           loadingGet: false,
           errorGet: null,
-          dataGet: data.results,
+          dataGet: data.data,
         });
       })
       .catch((err) => {
