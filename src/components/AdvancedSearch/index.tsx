@@ -1,6 +1,12 @@
 import "./styles.css";
 import Form from "../Form";
-export default function AdvancedSearch({ setName, setStatus, setPage }) {
+
+interface Props {
+  setPage: React.Dispatch<React.SetStateAction<number>>;
+  setName: React.Dispatch<React.SetStateAction<string>>;
+  setStatus: React.Dispatch<React.SetStateAction<string>>;
+}
+export default function AdvancedSearch({ setName, setStatus, setPage }: Props) {
   return (
     <div className="c-advanced-search">
       <h2 className="advanced-search__text">advanced search</h2>
