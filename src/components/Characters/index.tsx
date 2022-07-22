@@ -2,12 +2,16 @@ import { useState } from "react";
 import CardCharacter from "../CardCharacter";
 import Modal from "../Modal";
 import InnerCharacter from "../InnerCharacter";
-
+import {Results} from "../../types"
 import "./styles.css";
 
-export default function Characters({ characters }) {
-  const [characterId, setCharacterId] = useState(1);
-  const [showModal, setShowModal] = useState(false);
+interface Props {
+  characters: Results;
+}
+
+export default function Characters({ characters }: Props):JSX.Element {
+  const [characterId, setCharacterId] = useState<number>(1);
+  const [showModal, setShowModal] = useState<boolean>(false);
   const onOpen = () => {
     setShowModal(true);
   };
