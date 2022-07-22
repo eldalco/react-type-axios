@@ -1,17 +1,19 @@
 import { useEffect } from "react";
-
-import useCharacter from "../../Hooks/useCharacter";
+import useGetSingleCharacter from "../../hooks/useGetSingleCharacter";
 import Loading from "../Loading";
-
 import "./styles.css";
 
-export default function InnerCharacter({ characterId }) {
+interface Props {
+  characterId: number;
+}
+
+export default function InnerCharacter({ characterId }: Props) {
   const {
     isLoadingGetCharacter,
     hasErrorGetCharacter,
     dataGetCharacter,
     getACharacter,
-  } = useCharacter();
+  } = useGetSingleCharacter();
   useEffect(() => {
     getACharacter(characterId);
   }, [getACharacter, characterId]);
