@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
-import useGetAllCharacters from "../../Hooks/useGetAllCharacters";
-
+import useGetAllCharacters from "../../hooks/useGetAllCharacters";
 import AdvancedSearch from "../AdvancedSearch";
 import Characters from "../Characters";
 import Loading from "../Loading";
 import Paginated from "../Paginated";
 import "./styles.css";
 
-export default function ArchiveCharacters() {
-  const [name, setName] = useState("");
-  const [status, setStatus] = useState("");
-  const [page, setPage] = useState(1);
+export default function ArchiveCharacters():JSX.Element {
+  const [name, setName] = useState<string>("");
+  const [status, setStatus] = useState<string>("");
+  const [page, setPage] = useState<number>(1);
   const { isLoadingGet, hasErrorGet, dataGet, get } =
   useGetAllCharacters();
 
