@@ -1,15 +1,16 @@
 import "./styles.css";
+import {Info} from "../../types"
 
 interface Props {
-  infoPage: {};
+  infoPage?: Info;
   page: number;
-  setPage: ()=>number;
+  setPage: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export default function Paginated({ infoPage, page, setPage }: Props):JSX.Element {
   const onChangePage = (next:number) => {
-    if (!infoPage.prev && page + next <= 0) return;
-    if (!infoPage.next && page + next >= infoPage.pages) return;
+    if (!infoPage?.prev && page + next <= 0) return;
+    if (!infoPage?.next && page + next >= 20) return;
 
     setPage(page + next);
   };
