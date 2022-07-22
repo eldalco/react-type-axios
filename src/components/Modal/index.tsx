@@ -2,14 +2,19 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 
 import "./styles.css";
+interface Props {
+  show: boolean;
+  onClose: ()=> void;
+  children: React.ReactNode;
+}
 
-export default function Modal({ show, onClose, children }) {
+export default function Modal({ show, onClose, children }:Props) {
   const [isBrowser, setIsBrowser] = useState(false);
   useEffect(() => {
     setIsBrowser(true);
   }, []);
 
-  const handleCloseClick = (e) => {
+  const handleCloseClick = (e: React.MouseEvent<Element, MouseEvent>) => {
     e.preventDefault();
     onClose();
   };
@@ -28,7 +33,7 @@ export default function Modal({ show, onClose, children }) {
   if (isBrowser) {
     return ReactDOM.createPortal(
       modalContent,
-      document.getElementById("modal")
+      document.getElementById("modal") as HTMLElement
     );
   } else {
     return null;
