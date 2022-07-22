@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
-import { ArchiveAll } from './components/ArchiveAll';
+import HomePage from "./Pages/Home";
+import Menu from "./components/Menu";
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <ArchiveAll />
+      <Menu />
+      <HomePage />
+      <Footer />
     </div>
   );
 }
