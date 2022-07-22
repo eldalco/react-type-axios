@@ -1,6 +1,10 @@
+import {Character} from "../../types"
 import "./styles.css";
 
-export default function CardCharacter({ character }) {
+interface Props {
+  character: Character;
+}
+export default function CardCharacter({ character }: Props):JSX.Element {
   const { image, name, status, location, origin } = character;
   return (
     <article className="c-card-character">
