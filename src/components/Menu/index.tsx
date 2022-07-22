@@ -1,6 +1,6 @@
 import "./styles.css";
 
-export default function Menu() {
+export default function Menu():JSX.Element {
   return (
     <section className="c-menu">
       <img
