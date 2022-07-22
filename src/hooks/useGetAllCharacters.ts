@@ -1,15 +1,13 @@
 import { useCallback, useState } from "react";
 import getAllCharacters from "../services/getAllCharacters";
-
+import {GetDataResponse} from "../types"
 
 type Dta = {
     loadingGet: boolean,
     errorGet: null,
-    dataGet: null | GetDataResponse,
+    dataGet: GetDataResponse | null;
 }
-type GetDataResponse = {
-  data: [];
-};
+
 
 export default function useGetAllCharacters() {
   const [stateGet, setStateGet] = useState<Dta>({
@@ -26,7 +24,7 @@ export default function useGetAllCharacters() {
         setStateGet({
           loadingGet: false,
           errorGet: null,
-          dataGet: data.data,
+          dataGet: data,
         });
       })
       .catch((err) => {
