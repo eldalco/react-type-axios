@@ -1,0 +1,31 @@
+.c-characters {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 15%));
+  gap: 40px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.characters__character {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  transition: transform 0.4s ease;
+  -webkit-transition: transform 0.4s ease;
+  -moz-transition: transform 0.4s ease;
+  -ms-transition: transform 0.4s ease;
+  -o-transition: transform 0.4s ease;
+}
+.characters__character:hover{
+ transform: scale(1.03);
+ -webkit-transform: scale(1.03);
+ -moz-transform: scale(1.03);
+ -ms-transform: scale(1.03);
+ -o-transform: scale(1.03);
+}

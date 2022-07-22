@@ -1,0 +1,25 @@
+.c-loading {
+  text-align: center;
+}
+.loading__image {
+  min-width: 100px;
+  width: 12vw;
+  height: auto;
+  margin: 0;
+  animation: rotate 3s infinite linear;
+  -webkit-animation: rotate 3s infinite linear;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.loading__text {
+  margin: 5px 0;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}

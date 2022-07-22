@@ -1,0 +1,32 @@
+.c-footer {
+  display: flex;
+  justify-content: space-between;
+  height: 15vw;
+  min-height: 200px;
+}
+.footer__content {
+  text-align: center;
+  align-self: flex-end;
+}
+.footer__image {
+  align-self: center;
+  min-width: 200px;
+  width: 18vw;
+  min-height: 120px;
+  height: 10vw;
+  object-fit: cover;
+}
+.footer__copyright {
+  color: #fff;
+  font-size: 18px;
+}
+@media (max-width: 550px) {
+  .c-footer {
+    margin: 50px 0;
+    display: block;
+    min-height: auto;
+  }
+  .footer__image {
+    display: none;
+  }
+}

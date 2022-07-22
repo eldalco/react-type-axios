@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
-import { ArchiveClans } from './components/ArchiveClans';
+import HomePage from "./Pages/Home";
+import Menu from "./components/Menu";
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <ArchiveClans />
+      <Menu />
+      <HomePage />
+      <Footer />
     </div>
   );
 }
