@@ -10,7 +10,6 @@ interface Props {
 export default function InnerCharacter({ characterId }: Props) {
   const {
     isLoadingGetCharacter,
-    hasErrorGetCharacter,
     dataGetCharacter,
     getACharacter,
   } = useGetSingleCharacter();
