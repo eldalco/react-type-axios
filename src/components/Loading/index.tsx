@@ -5,8 +5,8 @@ export default function Loading():JSX.Element {
     <div className="c-loading">
       <img
         className="loading__image"
-        src="assets/images/portal-rick.webp"
-        alt="Ship Rick"
+        src="assets/images/rick-loader.webp"
+        alt="Rick drinking"
       />
       <p className="loading__text">Loading...</p>
     </div>
