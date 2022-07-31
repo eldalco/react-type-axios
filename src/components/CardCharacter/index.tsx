@@ -17,11 +17,11 @@ export default function CardCharacter({ character }: Props):JSX.Element {
       <section className="card-character__content">
         <h3 className="card-character__name">{name}</h3>
         <div className="card-character__attribute">
-          <p className="card-character__attribute-key">Location</p>
+          <p className="card-character__attribute-key">Location:  </p>
           <p className="card-character__attribute-value">{location.name}</p>
         </div>
         <div className="card-character__attribute">
-          <p className="card-character__attribute-key">Origin</p>
+          <p className="card-character__attribute-key">Origin: </p>
           <p className="card-character__attribute-value">{origin.name}</p>
         </div>
       </section>
