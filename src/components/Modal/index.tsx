@@ -8,7 +8,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-export default function Modal({ show, onClose, children }:Props) {
+export default function Modal({ show, onClose, children }:Props):JSX.Element {
   const [isBrowser, setIsBrowser] = useState(false);
   useEffect(() => {
     setIsBrowser(true);
@@ -36,6 +36,6 @@ export default function Modal({ show, onClose, children }:Props) {
       document.getElementById("modal") as HTMLElement
     );
   } else {
-    return null;
+    return <></>;
   }
 }
