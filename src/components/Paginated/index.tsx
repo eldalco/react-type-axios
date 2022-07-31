@@ -8,9 +8,14 @@ interface Props {
 }
 
 export default function Paginated({ infoPage, page, setPage }: Props):JSX.Element {
+ 
+  const setNumberPage = (numberPage:any ) => {
+    let page = numberPage
+    return page
+  }
   const onChangePage = (next:number) => {
     if (!infoPage?.prev && page + next <= 0) return;
-    if (!infoPage?.next && page + next >= 20) return;
+    if (!infoPage?.next && page + next >= setNumberPage(infoPage?.pages)) return;
 
     setPage(page + next);
   };
