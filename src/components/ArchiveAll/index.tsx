@@ -10,7 +10,7 @@ export default function ArchiveCharacters():JSX.Element {
   const [name, setName] = useState<string>("");
   const [status, setStatus] = useState<string>("");
   const [page, setPage] = useState<number>(1);
-  const { isLoadingGet, hasErrorGet, dataGet, get } =
+  const { isLoadingGet, dataGet, get } =
   useGetAllCharacters();
 
   useEffect(() => {
@@ -25,7 +25,6 @@ export default function ArchiveCharacters():JSX.Element {
       {!isLoadingGet && (
         <Paginated infoPage={dataGet?.info} page={page} setPage={setPage} />
       )}
-      {/* {hasErrorGet && <Error />} */}
     </div>
   );
 }
