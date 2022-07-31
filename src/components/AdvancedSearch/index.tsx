@@ -8,10 +8,11 @@ interface Props {
 }
 export default function AdvancedSearch({ setName, setStatus, setPage }: Props) {
   return (
-    <div className="c-advanced-search">
-      <h2 className="advanced-search__text">advanced search</h2>
-      <Form setName={setName} setStatus={setStatus} setPage={setPage}/>
-      <img className="advanced-search__image" src="assets/images/pickle-rick.webp" alt="" />
+    <div className="c-advanced-search">      
+      <div className="advanced__search--block">
+        <h2 className="advanced-search__text">advanced search</h2>
+      </div>
+      <Form setName={setName} setStatus={setStatus} setPage={setPage}/>      
     </div>
   );
 }
